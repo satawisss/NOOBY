@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Download</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+    }
+    /* Overlay background */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    /* Popup */
+    .popup {
+      background: #fff;
+      border-radius: 12px;
+      width: 350px;
+      max-width: 90%;
+      text-align: center;
+      padding: 25px 20px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    /* Close button */
+    .popup .close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+    .popup img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .popup h2 {
+      margin: 8px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .popup .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+    .popup .ready {
+      color: #00c200;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .popup p {
+      font-size: 14px;
+      margin: 5px 0 20px;
+    }
+    .download-btn {
+      background: #ff3333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      padding: 12px 20px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay -->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <span class="close" onclick="document.getElementById('popup').style.display='none'">&times;</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Poké_Ball_icon.svg" alt="App Icon">
+      <h2>Pokemon Go</h2>
+      <div class="subtitle">Teleport, Joystick, GPS and More!</div>
+      <div class="ready">Download ready</div>
+      <p>Click the button below in order to start with your app download.</p>
+      <button class="download-btn">DOWNLOAD NOW</button>
+    </div>
+  </div>
+</body>
+</html>
